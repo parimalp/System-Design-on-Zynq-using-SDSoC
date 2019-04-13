@@ -12,12 +12,12 @@ After completing this lab, you will be able to:
 
 ## Create an SDx Project 
 ### Launch SDx and create a project, called lab4, using the Empty Application template and then using the provided source files, targeting the PYNQ-Z1 or PYNQ-Z2 board and Standalone OS.
-1. Open SDx, select {labs} as the workspace and click OK.
-2. Create a new project called lab4
-3. Click Next to see Platform window showing various available platforms.
-4. Select either PYNQ-Z1[custom] or PYNQ-Z2[custom] and click Next.
+1. Open SDx, select {labs} as the workspace and click **OK**.
+2. Create a new project called **lab4**
+3. Click **Next** to see Platform window showing various available platforms.
+4. Select either _PYNQ-Z1[custom]_ or _PYNQ-Z2[custom]_ and click **Next**.
 
-	Refer to Lab1 document to how to add custom platform if you don't see it listed.
+	Refer to Lab1 document for how to add custom platform if you don't see it listed.
 
 5. Select **Standalone** as the target OS and click **Next**.
 6. Select **Empty Application** and click **Finish**.
@@ -43,7 +43,7 @@ After completing this lab, you will be able to:
     <i>Selecting Estimate performance option</i>
     </p>
 
-5. Select **Build Configurations \&gt; Set Active \&gt; Debug**
+5. Select **Build Configurations &gt; Set Active &gt; Debug**
 6. Right-click on **lab4** and select **Build Project**.
 
 	The SDx environment builds the project. A dialog box displaying the status of the build process appears.
@@ -59,9 +59,9 @@ After completing this lab, you will be able to:
     <i>Initial estimate of hardware only performance</i>
     </p>
 
-### Connect and power up the board. Click on the Click Here link of the initial estimation report to run the application and get the entire application speedup.
+### Connect and power up the board. Click on the _Click Here_ link of the initial estimation report to run the application and get the entire application speedup.
 1. Connect the board and power it ON.
-2. Click on the Click Here link in the SDSoC Report Viewer tab to get the software only application performance and speedup.
+2. Click on the _Click Here_ link in the SDSoC Report Viewer tab to get the software only application performance and speedup.
 
 	Since the board is connected using JTAG and the OS is Standalone, the Local connection will be used.
 
@@ -101,7 +101,7 @@ After completing this lab, you will be able to:
     <i>Initial hardware acceleration estimate for the two functions</i>
     </p>
 
-5. Click on the **Click Here** link in the SDSoC Report Viewer tab and click **OK**.
+5. Click on the _Click Here_ link in the SDSoC Report Viewer tab and click **OK**.
 
     <p align="center">
     <img src ="./images/lab4/Fig6.png" />
@@ -114,7 +114,7 @@ After completing this lab, you will be able to:
 ### Create a new empty application project called lab4a targeting Linux OS. Import the provided source files from source\lab4\src folder
 ### For this portion of the lab, you will need an Ethernet port on the PC configured with 192.168.0.1 as an IP address and an Ethernet cable.
 
-1. Select **File \&gt; New \&gt; SDx Project** to open the New Project GUI.
+1. Select **File &gt; New &gt; SDx Project** to open the New Project GUI.
 2. Enter **lab4a** as the project name.
 3. Click **Next** to see _Platform_ window showing various available platforms.
 4. Select either _PYNQ-Z1[custom]_ or _PYNQ-Z2[custom]_ and click **Next.**
@@ -184,7 +184,7 @@ After completing this lab, you will be able to:
     </p>
 
 ### Estimate the accelerator speedup.
-1. In the performance and resource estimate report, click on the Click Here link. Click OK to launch the Linux TCF agent.
+1. In the performance and resource estimate report, click on the _Click Here_ link. Click OK to launch the Linux TCF agent.
 2. When the execution completes the performance estimate report will be displayed in the SDSoC report viewer.
 
     <p align="center">
@@ -358,7 +358,7 @@ After completing this lab, you will be able to:
     </p>
 
 4. Close Vivado without saving the block diagram.
-5. Close SDx by selecting **File \&gt; Exit**
+5. Close SDx by selecting **File &gt; Exit**
 6. Turn OFF the power to the board.
 
 ## Conclusion
