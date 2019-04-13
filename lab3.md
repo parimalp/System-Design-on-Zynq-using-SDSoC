@@ -12,14 +12,14 @@ After completing this lab, you will be able to:
 
 ## Create an SDx Project
 ### Launch SDx and create a project, called lab3, using the Empty Application template and then using the provided source files, targeting the PYNQ-Z1 or PYNQ-Z2 board.
-1. Open SDx, select {labs} as the workspace and click OK.
-1. Create a new project called lab3
-1. Click Next to see Platform window showing various available platforms
-1. Select either PYNQ-Z1[custom] or PYNQ-Z2[custom] and click Next.
+1. Open SDx, select {labs} as the workspace and click **OK**.
+1. Create a new project called **lab3**
+1. Click **Next** to see Platform window showing various available platforms
+1. Select either _PYNQ-Z1[custom]_ or _PYNQ-Z2[custom]_ and click **Next**.
 
-	Refer to Lab1 document to how to add custom platform if you don't see it listed.
+	Refer to Lab1 document for how to add custom platform if you don't see it listed.
 
-1. Select **Standalone**** OS **as the _System Configuration_ and click** Next**.
+1. Select **Standalone OS** as the _System Configuration_ and click** Next**.
 
 	The Templates page appears, containing source code examples for the selected platform.
 
@@ -28,7 +28,7 @@ Note that the lab3 &gt; src folder is empty.
 
 ### Import the provided source files from the {source}\lab3\src folder. Create a Debug configuration and build the project.
 1. Right click on src under lab3 in the Project Explorer tab and select Import…
-1. Click on File System under General category and then click Next.
+1. Click on **File System** under the _General_ category and then click **Next**.
 
     <p align="center">
     <img src ="./images/lab3/Fig1.png" />
@@ -43,21 +43,22 @@ Note that the lab3 &gt; src folder is empty.
 	The files will be copied into the src folder under lab3 folder. This can be verified by expanding the src folder in the Project Explorer tab and by using Windows Explorer.
 
     <p align="center">
-    <img src ="./images/lab3/Fig1.png" />
+    <img src ="./images/lab3/Fig2.png" />
     </p>
     <p align = "center">
 	<i>Selecting path and files to be imported</i>
     </p>
 
 1. Uncheck the **Generate SD card image** option
-1. Select **Build Configurations \&gt; Set Active \&gt; Debug**
+1. Select **Build Configurations &gt; Set Active &gt; Debug**
 1. Right-click on **lab3** and select **Build Project**
-This may take about five minutes as it is a pure software compilation.
+
+	This may take about five minutes as it is a pure software compilation.
 
 ## Profile the Application
 ### Connect the board in the JTAG mode and power it ON. Start the Debug session. Add the TCF Profiler view and configure it to include the Aggregate per Function option.
 1. Connect the board in the JTAG mode and power it ON.
-1. Right-click on the lab3 entry in the Project Explorer tab and select Debug As &gt; Launch on Hardware (SDx Application Debugger)
+1. Right-click on the _lab3_ entry in the Project Explorer tab and select **Debug As &gt; Launch on Hardware (SDx Application Debugger)**
     <p align="center">
     <img src ="./images/lab3/Fig3.png" />
     </p>
@@ -87,7 +88,7 @@ This may take about five minutes as it is a pure software compilation.
 	<i>The Debug perspective</i>
     </p>
 
-1. Select **Window \&gt; Show View \&gt; Other** and then expand the _Debug_
+1. Select **Window &gt; Show View &gt; Other** and then expand the _Debug_
 1. Select _TCF Profiler_ and click **OK**.
 
 	The TCF Profiler tab will open in the same window where Outline view was open.
@@ -131,7 +132,7 @@ This may take about five minutes as it is a pure software compilation.
 	<i>The TCF Profiler view showing the collected number of samples</i>
     </p>
 
-1. Click on the Maximize view button (![alt tag](./images/lab3/maximize_btn.png)).
+1. Click on the Maximize view button (![alt tag](./images/lab3/maximize_button.png)).
 
 	Note that it shows three sections. The top-section shows various calls made after the execution started. The first function called is _start. In the Called From sub-window, nothing is listed as it the root function. In the Child Calls window, it shows main as the function being called from _start.
 
@@ -199,13 +200,14 @@ You can see that the CPU spends a large proportion of the total time in the shar
 ### Add sharpen_filter function for hardware acceleration. Change SDSCC compiler setting to define TIME_SHARPEN symbol. Build the project and analyze the data motion network.
 ### Since this will take time to build, you will import lab3a project from the source\lab3 folder and then profile the application. The precompiled project has sharpen_filter already added for hardware with the compiler setting added.
 
-Skip to 3-2 if you are continuing to build the project.
+Skip to [Continue building the project](#sec3-2) if you are continuing to build the project
 
 1. Switch back to the SDx perspective.
-1. Select **File \&gt; Import**
+1. Select **File &gt; Import**
 1. Double-click on _Import Existing Projects into Workspace_.
 1. In the _Import Projects_ window, click on the _Select archive file_ option, then click the **Browse** button and then browse to _{source}\lab3_, select _lab3a.zip_ and click **Open**.
-Make sure that lab3a is checked in the Projects window.
+
+	Make sure that lab3a is checked in the Projects window.
 
     <p align="center">
     <img src ="./images/lab3/Fig13.png" />
@@ -214,9 +216,9 @@ Make sure that lab3a is checked in the Projects window.
 	<i>Importing an existing project in the workspace
 </i>
     </p>
+Skip to [Continue building the project](#sec3-3) if you are continuing to build the project
 
-Skip to 3-3 skipping continue building project.
-
+<a name="sec3-2"></a>
 ### Continue building the project.
 1. Switch back to the SDx perspective by clicking (![alt tag](./images/lab3/SDx_Perspective.png))
 
@@ -224,13 +226,15 @@ Skip to 3-3 skipping continue building project.
 
 1. Click on the "+" sign in the Hardware Functions area to open the list of functions which are in the source files (It may take little longer to show up).
 
-1. Select sharpen_filter function and click OK.
-1. Double-click the SDSoC_lab_design_main.c under lab3 &gt; src.
-1. Note several conditional compilation statements around lines 83 to 103. When a symbol is defined, and the condition is true, these statements will allow the corresponding function(s) to be timed.
+1. Select _sharpen\_filter_ function and click **OK**.
+1. Double-click the _SDSoC\_lab\_design\_main.c_ under lab3 &gt; src.
+1. Note several conditional compilation statements around lines 83 to 103. 
+
+	When a symbol is defined, and the condition is true, these statements will allow the corresponding function(s) to be timed.
 1. Right click on lab3 in the Project Explorer window and select C/C++ Build Settings.
-1. Select Symbols under SDSCC Compiler and click " +" button to define a symbol.
-1. Enter TIME_SHARPEN in the field and click OK.
-1. Click OK again.
+1. Select **Symbols** under SDSCC Compiler and click "+" button to define a symbol.
+1. Enter **TIME_SHARPEN** in the field and click **OK**.
+1. Click **OK** again.
 
     <p align="center">
     <img src ="./images/lab3/Fig14.png" />
@@ -246,7 +250,10 @@ This may take about 40 minutes.
 
 1. When build process is done, select the **lab3** tab so you can access Data Motion link.
 
-### 3.3. Analyze the data motion network.
+Skip to [Continue building the project](#sec3-2) if you are continuing to build the project
+
+<a name="AnalyzeDataMotionNetowrk"></a>
+### Analyze the data motion network.
 1. Click on the Data Motion report link and analyze the result.
     <p align="center">
     <img src ="./images/lab3/Fig15.png" />
@@ -256,9 +263,11 @@ This may take about 40 minutes.
     </p>
 
 ### Open Vivado IPI design.
-1. Open Vivado by selecting Start &gt; Xilinx Design Tools &gt; Vivado 2018.2
-1. Open the design by browsing to {labs}/lab3/Debug/_sds/p0/vivado/prj if you continued building the project or {labs}/lab3a/Debug/_sds/p0/vivado/prj if you have imported the project andselecting prj.xpr.
-1. Click on Open Block Design in the Flow Navigator pane. The block design will open. Note various system blocks which connect to the Cortex-A9 processor (identified by ZYNQ in the diagram).
+1. Open Vivado by selecting **Start &gt; Xilinx Design Tools &gt; Vivado 2018.2**
+1. Open the design by browsing to {labs}/lab3/Debug/_sds/p0/vivado/prj if you continued building the project or {labs}/lab3a/Debug/_sds/p0/vivado/prj if you have imported the project and selecting **prj.xpr**.
+1. Click on Open Block Design in the Flow Navigator pane. 
+
+	The block design will open. Note various system blocks which connect to the Cortex-A9 processor (identified by ZYNQ in the diagram).
 1. Click on the show interface connections only (![alt tag](./images/lab3/interface_btn.png)) button followed by click on the regenerate layout (![alt tag](./images/lab3/regenerate_btn.png)) button.
 1. Follow through both input and output data paths of the sharpen_filter_1 instance and observe that they are connected to the S_AXI_ACP port of PS7.
     <p align="center">
@@ -271,7 +280,7 @@ This may take about 40 minutes.
 
 	Notice that two data movers are used; one for input and another for output data. They both connect to S_AXI_ACP of PS7 through the axi_ic_ps7_S_AXI_ACP instance. The two data movers and the sharpen_filter_1_if instance can be configured by their S_AXI_LITE interfaces which are connected to the ps7 via the axi_ic_ps7_M_AXI_GP0 instance.
 
-1. Close Vivado by selecting **File \&gt; Exit.** Do not save the block design.
+1. Close Vivado by selecting **File &gt; Exit.** Do not save the block design.
 ### Connect the board and power it ON. Start the Debug session. Add the TCF Profiler view and configure it to include the Aggregate per Function option.
 1. Connect the board and power it ON.
 1. Right-click on the lab3 (lab3a if you have imported the project) entry in the Assistant tab and select Debug As &gt; Launch on Hardware (SDx Application Debugger)
@@ -347,11 +356,11 @@ Note that the number of collected samples may vary depending on your PC's perfor
 1. Click on the **Disconnect** button.
 
 ## Add sobel_filter to Accelerators and Profile
-### Add sobel_filter function for hardware acceleration. Change SDSCC compiler setting to define TIME_EDGE_DETECT symbol. Build the project.
-###Since this will take time to build, you will import lab3b project from the {source}\lab3 folder and then profile the application. The precompiled project has both the sharpen_filter and sobel_filter already added for hardware with the compiler setting added.
+### Add sobel\_filter function for hardware acceleration. Change SDSCC compiler setting to define TIME\_EDGE\_DETECT symbol. Build the project.
+### Since this will take time to build, you will import lab3b project from the {source}\lab3 folder and then profile the application. The pre-compiled project has both the sharpen\_filter and sobel\_filter already added for hardware with the compiler setting added.
 
 1. Switch back to the SDx perspective.
-1. Select **File \&gt; Import**
+1. Select **File &gt; Import**
 1. Double-click on _Import Existing Projects into Workspace_.
 1. In the _Import Projects_ window, click on the _Select archive file_ option, then click the **Browse** button and then browse to _{source}\lab3_, select _lab3b.zip_ and click **Open**.
 
@@ -364,7 +373,7 @@ Note that the number of collected samples may vary depending on your PC's perfor
 1. Double-click on the **project.sdx** under _lab3b_ to access the _SDx Project Settings_.
 1. Right Click on the **lab3b** project folder, select **Debug As** , and **Launch on Hardware**
 1. Click **Yes** to switch to the debug perspective if prompted.
-1. Select **Window \&gt; Show View \&gt; Other** and then expand the _Debug_ Select _TCF Profiler_ and click **OK**.
+1. Select **Window &gt; Show View &gt; Other** and then expand the _Debug_ Select _TCF Profiler_ and click **OK**.
 1. In the _TCF Profiler_ view, click the start button, enable the _Aggregate per function_ option and _Enable stack tracing_. Click **OK**.
 ### Start serial communication. Profile the complete application and observe the improvements.
 1. Connect a terminal as before. (Terminal Tab, TeraTerm, PuTTY, HyperTerminal etc.)
@@ -407,7 +416,7 @@ Note that now CPU spends time in rgb_2_grap function. The _p0_sobel_filter_0 tak
 	Compared to output with the profiler running, the execution takes significantly fewer cycles.
 
 1. Click on the **Disconnect** button to terminate the execution.
-1. Close SDx by selecting **File \&gt; Exit**
+1. Close SDx by selecting **File &gt; Exit**
 1. Turn OFF the power to the board.
 
 ##Conclusion

@@ -13,7 +13,7 @@ After completing this lab, you will be able to:
 
 ## Create an SDx Project 
 ### Launch SDx and create a project, called lab1, using one of the available templates, targeting the PYNQ-Z1 or PYNQ-Z2 board.
-1. Open SDx by selecting **Start \&gt;**  **Xilinx Design Tools**  **\&gt; SDx IDE 2018.2**
+1. Open SDx by selecting **Start &gt; Xilinx Design Tools &gt; SDx IDE 2018.2**
 
 	The Workspace Launcher window will appear.
 
@@ -27,14 +27,13 @@ After completing this lab, you will be able to:
 
 1. Click **OK**.
 
-	The SDx development environment window will appear showing the Welcome tab.
+	The SDx development environment window will appear showing the _Welcome_ tab.
 
     <p align="center">
     <img src ="./images/lab1/Fig2.png" />
     </p>
     <p align = "center">
-    <i>The SDx development environment with Welcome tab
-</i>
+    <i>The SDx development environment with Welcome tab</i>
     </p>
 
 	From here you can create a new project, create an application project, import an existing project, and access the tutorials and web resources by clicking on the desired link.
@@ -49,11 +48,11 @@ After completing this lab, you will be able to:
     <i>Entering project name</i>
     </p>
 
-	You could have clicked Click X on the Welcome tab to close it, and you would have seen the empty workspace in the background. From there, you would have selected File &gt; New &gt; Xilinx SDx Project to open the New Project GUI. You then would have entered lab1 as the project name.
+	You could have clicked X on the Welcome tab to close it, and you would have seen the empty workspace in the background. From there, you would have selected File &gt; New &gt; Xilinx SDx Project to open the New Project GUI. You then would have entered lab1 as the project name.
 
 1. Click **Next** to see _Platform_ window showing various available platforms.
 	
-	Notice that neither of PYNQ-Z1 or PYNQ-Z2 are listed. We will have to add the board platform as a custom
+	Notice that neither of PYNQ-Z1 or PYNQ-Z2 are listed. We will have to add the board platform as a custom platform.
 
     <p align="center">
     <img src ="./images/lab1/Fig4.png" />
@@ -64,7 +63,7 @@ After completing this lab, you will be able to:
 
 1. Click the **Add Custom Platform…** button
 
-1. Browse to {labs}\..\2018\_2\_sources, select {board}, and click **OK**
+1. Browse to {labs}\\..\2018\_2\_sources, select {board}, and click **OK**
 
 	Notice the board related platform is displayed in the available platforms table
 
@@ -99,7 +98,7 @@ After completing this lab, you will be able to:
 
 1. Click **Finish**.
 
-	The created project will be displayed. In the left, you will see Project Explorer under which the lab1 project directory will be displayed (you may have to expand the folder). It shows the Includes and src folders. The src folder contains the source files which were copied from the template source directory located at &lt;SDx_install_directory&gt;\samples\<template_name&gt;. The lab1 folder also shows the project.sdx project file. Double-clicking on it will display what you see in the right-side pane.
+	The created project will be displayed. In the left, you will see Project Explorer under which the lab1 project directory will be displayed (you may have to expand the folder). It shows the Includes and src folders. The src folder contains the source files which were copied from the template source directory located at samples directory of the custom platform. The lab1 folder also shows the project.sdx project file. Double-clicking on it will display what you see in the right-side pane.
 
 	In the SDx Project Settings pane, you see General, Hardware Functions, and Options areas. From here you will be able to change options, identify/modify the function(s) that will be implemented in hardware, setup for debugging and estimation, and access various reports.
 
@@ -121,7 +120,7 @@ After completing this lab, you will be able to:
     <i>Available frequencies</i>
     </p>
 
-1. You can add additional functions by click on the Add HW Functions… (![alt tag](./images/lab1/AddHWfunctionsbutton.png)) button. When clicked, the source files will be scanned and the available functions in the project will be displayed along with possible candidates.
+1. You can add additional functions by clicking on the Add HW Functions… (![alt tag](./images/lab1/AddHWfunctionsbutton.png)) button. When clicked, the source files will be scanned and the available functions in the project will be displayed along with possible candidates.
 
     <p align="center">
     <img src ="./images/lab1/Fig10.png" />
@@ -131,7 +130,7 @@ After completing this lab, you will be able to:
     </p>
 
 1. Click **Cancel** since we do not want to add any other functions.
- 	You can remove an already added functions by selecting their corresponding entries and click on the Remove HW Functions (![alt tag](./images/lab1/RemoveHWfunctionsbutton.png)) button.
+ 	You can remove an already added functions by selecting their corresponding entries and clicking on the Remove HW Functions (![alt tag](./images/lab1/RemoveHWfunctionsbutton.png)) button.
 
 1. In the Assistant view notice the function(s) which is(are) marked for the hardware implementation.
 
@@ -146,8 +145,8 @@ After completing this lab, you will be able to:
 
 ### Select Release configuration and build the project. When done, analyze the data motion network through the report and built hardware through Vivado IPI.
 
-1. Right-click on lab1 in the Project Explorer and select Build Configurations &gt; Set Active to see possible configurations and what is currently selected.
-1. Select Build Configurations &gt; Set Active &gt; Release
+1. Right-click on lab1 in the Project Explorer and select **Build Configurations &gt; Set Active** to see possible configurations and what is currently selected.
+1. Select **Build Configurations &gt; Set Active &gt; Release**
 
 	You can also select the configuration by clicking on the drop-down button of the Active build configuration field of the SDx Project Settings pane.
 
@@ -160,7 +159,7 @@ After completing this lab, you will be able to:
 
 	The Release build configuration uses a higher compiler optimization setting than the Debug build.
 
-	Building the project and generating the results in the next step may take 50 to 60 minutes. Alternatively, you can import provided pre-built files into your workspace and load the results.
+	**_Building the project and generating the results in the next step may take 50 to 60 minutes. Alternatively, you can import provided pre-built files into your workspace and load the results._**
 
 1. Right-click on **lab1** and select **Build Project**
 
@@ -170,13 +169,12 @@ After completing this lab, you will be able to:
 
 	You can also load the results by importing the pre-built files into your workspace with these steps:
  
- * Select File &gt; Import and then select General &gt; Existing Projects into Workspace and click Next.
- * Select Select archive file and click Browse to navigate to {labs}\source\lab1
- * Select lab1_prebuilt.zip , and click Open
- * Click Finish.
+ 	* Select File &gt; Import and then select General &gt; Existing Projects into Workspace and click Next.
+ 	* Select Select archive file and click Browse to navigate to {labs}\source\lab1
+ 	* Select lab1_prebuilt.zip , and click Open
+ 	* Click Finish.
 
-1. Expand the **lab1** (or **lab1\_prebuilt** if you have imported the project) directory in the _Project Explorer_ tab and observe that _Release_ folder is created along with virtual folders of _Binaries_ and _Archives_. Expanding the _Release_ folder shows **\_sds, sd\_card, src** folders along with **lab1.elf (**(or **lab1\_prebuilt.elf** if you have imported the project) [executable] **, lab1.elf.bit** (or **lab1\_prebuilt.elf.bit** if you have imported the project) [hardware bit file] and several make files.
-Generated (b) Imported
+1. Expand the **lab1** (or **lab1\_prebuilt** if you have imported the project) directory in the _Project Explorer_ tab and observe that _Release_ folder is created along with virtual folders of _Binaries_ and _Archives_. Expanding the _Release_ folder shows **\_sds, sd\_card, src** folders along with **lab1.elf (**(or **lab1\_prebuilt.elf** if you have imported the project) [executable], **lab1.elf.bit** (or **lab1\_prebuilt.elf.bit** if you have imported the project) [hardware bit file] and several make files.
 
     <p align="center">
     <img src ="./images/lab1/Fig13.png" />
@@ -219,7 +217,7 @@ Generated (b) Imported
     <i>The Assistant pane</i>
     </p>
 
-1. In the _Assistant_ pane, double-click on the **Data Motion Network**** Report** entry.
+1. In the _Assistant_ pane, double-click on the **Data Motion Network Report** entry.
 
 	The report shows the connections made by the SDx environment and the types of data transfers for each function implemented in hardware. You can also open this report file by double-clicking data_motion.html entry in Release &gt; _sds &gt; reports of Project Explorer.
 
@@ -233,9 +231,9 @@ Generated (b) Imported
 
 	There is one accelerated function- dataflow. It is given instance name of dataflow_1. The function has two arguments and hence two ports.
 
-	The transfer size is 64 bytes or 32 words on each ports.
+	The transfer size is 64 bytes or 16 words on each ports.
 
-1. Start Vivado by selecting **Start \&gt;**  **Xilinx Design Tools**  **\&gt; Vivado 2018.2**
+1. Start Vivado by selecting **Start &gt; Xilinx Design Tools &gt; Vivado 2018.2**
 
 1. Click the **Open Project** link, open the design by browsing to _{labs}/lab1/Release/\_sds/p0/vivado/prj_ and selecting **prj.xpr**.
 
@@ -261,17 +259,17 @@ Generated (b) Imported
     <i>Data movers connections</i>
     </p>
 
-1. Close Vivado by selecting **File \&gt; Exit**
+1. Close Vivado by selecting **File &gt; Exit**
 
 ### Open the dataflow.cpp file under Release &gt; _sds&gt; swstubs and lab1 &gt; src folders and understand the added code segments.
 
-1. Expand lab1 &gt; src and double-click on dataflow.cpp to see its content.
+1. Expand **lab1 &gt; src** and double-click on _dataflow.cpp_ to see its content.
 
 	If line numbers are not visible, then you can right-click in the left border of the file and select Show Line Numbers.
 
 	Note that line 104 makes the dataflow function call. Lines 109 to 116 makes four additional calls to the dataflow function. The dataflow function is defined between lines 57 and 67.
 
-1. Expand **Release \&gt; \_sds\&gt; swstubs** and double-click on _main.cpp_ to see its content.
+1. Expand **Release &gt; \_sds &gt; swstubs** and double-click on _main.cpp_ to see its content.
 Note that the main() function is preceded by five function prototypes (lines 179 to 183) and the functions are defined between lines 70 and 153. On lines 198, 203, 205, 207, and 209 the original calls are replaced.
 
     <p align="center">
@@ -320,7 +318,7 @@ Note that the main() function is preceded by five function prototypes (lines 179
     <i>Program output</i>
     </p>
 
-1. Close SDx by selecting **File \&gt; Exit**
+1. Close SDx by selecting **File &gt; Exit**
 1. Turn OFF the power to the board.
 
 ## Conclusion
