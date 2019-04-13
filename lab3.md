@@ -19,15 +19,16 @@ After completing this lab, you will be able to:
 
 	Refer to Lab1 document for how to add custom platform if you don't see it listed.
 
-1. Select **Standalone OS** as the _System Configuration_ and click** Next**.
+1. Select **Standalone OS** as the _System Configuration_ and click **Next**.
 
 	The Templates page appears, containing source code examples for the selected platform.
 
 1. Select **Empty Application** and click **Finish**.
-Note that the lab3 &gt; src folder is empty.
+
+	Note that the lab3 &gt; src folder is empty.
 
 ### Import the provided source files from the {source}\lab3\src folder. Create a Debug configuration and build the project.
-1. Right click on src under lab3 in the Project Explorer tab and select Import…
+1. Right click on src under lab3 in the Project Explorer tab and select **Import…**
 1. Click on **File System** under the _General_ category and then click **Next**.
 
     <p align="center">
@@ -216,7 +217,7 @@ Skip to [Continue building the project](#sec3-2) if you are continuing to build 
 	<i>Importing an existing project in the workspace
 </i>
     </p>
-Skip to [Continue building the project](#sec3-3) if you are continuing to build the project
+Skip to [Analyze Data Motion Network](#AnalyzeDataMotionNetowrk)
 
 <a name="sec3-2"></a>
 ### Continue building the project.
@@ -249,8 +250,6 @@ Skip to [Continue building the project](#sec3-3) if you are continuing to build 
 This may take about 40 minutes.
 
 1. When build process is done, select the **lab3** tab so you can access Data Motion link.
-
-Skip to [Continue building the project](#sec3-2) if you are continuing to build the project
 
 <a name="AnalyzeDataMotionNetowrk"></a>
 ### Analyze the data motion network.
