@@ -419,6 +419,6 @@ Note that now CPU spends time in rgb_2_grap function. The _p0_sobel_filter_0 tak
 1. Close SDx by selecting **File &gt; Exit**
 1. Turn OFF the power to the board.
 
-##Conclusion
+## Conclusion
 
 In this lab, you profiled a pure software application which consist of three major functions. You saw the amount of time those three functions took to execute. Then you ported one of the most time-consuming function into hardware and profiled again. You then ported second most time-consuming function into hardware and profiled again and observed the performance improvement. You used the TCF profiler and sds_lib API to collect the data.
