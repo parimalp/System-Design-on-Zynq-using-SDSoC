@@ -9,7 +9,7 @@ After completing this lab, you will be able to:
 
 ## Steps
 ## Create an SDx Project
-### _Go through this step if you want to start from scratch otherwise skip to the next step._
+### _Go through this step if you want to start from scratch otherwise skip to the [Debugging Standalone Application](#debug)._
 
 ### Launch SDx and create a project, called lab5, using Standalone OS and the Empty Application template targeting the PYNQ-Z1 or PYNQ-Z2 board. Then add the provided source files.
 1. Open SDx, if not already open
@@ -37,8 +37,9 @@ After completing this lab, you will be able to:
 3. Right-click on lab5 and select Build Project
 The project will be built, generating the bitstream, and an SD card image. Since this will take about 40 minutes, we will import the pre-built project.
 
+<a name="debug"></a>
 ## Debugging Standalone Application 
-Skip Step 2-1 if you are continuing from Step 1.
+Go to [debug](#startdebug) if you have created the project.
 
 ### Import the pre-built lab5 project which has sharpen_filter marked for the hardware acceleration. Uncheck the Generate SD card Image option.
 1. Select File &gt; Import
@@ -55,6 +56,8 @@ The project will be imported and lab5 folder will be created in the Project Expl
 	The project file will be opened and the sharpen_filter function entry will be displayed in the HW Functions window.
 
 6.  **Uncheck** the _Generate SD Card Image_ option as it is already generated.
+
+<a name="stardebug"></a>
 ### Set the board to JTAG boot. Connect and power ON the board. Make terminal connection. Start the debug session. Step through 5 statements. Set a breakpoint on line 16 of the rgb_2_gray.c program.
 1. Set the board to JTAG boot. Connect the board and power it ON.
 2. Either use the SDx Terminal tab or use third party terminal emulator program like TeraTerm, Putty, HyperTerminal. Make a connection to an appropriate COM port, setting 115200 baud rate.
@@ -212,7 +215,7 @@ The project will be imported and lab5 folder will be created in the Project Expl
 
 ### For this portion of the lab, you will need an Ethernet port on the PC configured to 192.168.0.1 as an IP address and an Ethernet cable connected between the PC and the board.
 
-### You can execute Step 3-1 and Step 3-2 if you want to start from scratch otherwise skip to Step 3-3.
+### Go to [Using imported project](#DebugLinux) otherwise create project from scratch.
 
 ### Create a new empty application project called lab5a targeting Linux OS. Import the provided source files from source\lab5\src folder
 1. Select File &gt; New &gt; Xilinx SDx Project to open the New Project GUI.
@@ -229,8 +232,9 @@ The project will be build, generating bit stream, and the SD card image.
 
 	Since this will take about 35 minutes, we will import the pre-build project.
 
-	If you are continuing from Step 3-2, then skip Step 3-3.
+	If you are continuing, then go to [Copy the SDcard Image](#StartDebugLinux).
 
+<a name="DebugLinux"></a>
 ### Import the pre-built lab5a project which has sharpen_filter marked for the hardware acceleration. Uncheck the bitstream generation option.
 1. Select File &gt; Import
 2. Click on Existing Projects into Workspace under General and click Next.
@@ -247,6 +251,9 @@ The project will be build, generating bit stream, and the SD card image.
 	The project file will be opened and the sharpen_filter function entry will be displayed in the HW Functions window.
 
 1. **Uncheck** the _Generate SD Card Image_ option.
+
+<a name="StartDebugLinux"></a>
+### Copy the SDcard Image
 ### Copy the sd_card content on the SD Card. Configure the board to boot from the SD card. Connect and power up the board. Setup the ip addresses both on the board and the PC Ethernet adaptor.
 1. Using the Windows Explorer copy the content of the lab5a &gt; Debug &gt; sd_card onto the SD card. Place the SD card into the board.
 2. Configure the board to boot from the SD card.
