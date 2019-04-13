@@ -167,12 +167,12 @@ After completing this lab, you will be able to:
 
 	This may take about 50 to 60 minutes.
 
-	You can also load the results by importing the pre-built files into your workspace with these steps:
+You can also load the results by importing the pre-built files into your workspace with these steps:
  
- 	* Select File &gt; Import and then select General &gt; Existing Projects into Workspace and click Next.
- 	* Select Select archive file and click Browse to navigate to {labs}\source\lab1
- 	* Select lab1_prebuilt.zip , and click Open
- 	* Click Finish.
+ * Select **File &gt; Import** and then select **General &gt; Existing Projects into Workspace** and click **Next**.
+ * Select **Select archive file** and click Browse to navigate to _{labs}\source\lab1_
+ * Select **lab1\_prebuilt.zip**, and click **Open**
+ * Click **Finish**.
 
 1. Expand the **lab1** (or **lab1\_prebuilt** if you have imported the project) directory in the _Project Explorer_ tab and observe that _Release_ folder is created along with virtual folders of _Binaries_ and _Archives_. Expanding the _Release_ folder shows **\_sds, sd\_card, src** folders along with **lab1.elf (**(or **lab1\_prebuilt.elf** if you have imported the project) [executable], **lab1.elf.bit** (or **lab1\_prebuilt.elf.bit** if you have imported the project) [hardware bit file] and several make files.
 
