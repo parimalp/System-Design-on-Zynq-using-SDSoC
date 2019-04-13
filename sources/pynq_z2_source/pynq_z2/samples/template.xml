@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:Manifest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:manifest="http://www.xilinx.com/manifest">
+	<template location="dataflow" name="Dataflow" description="Dataflow">
+		<supports>
+			<and>
+				<or>
+					<os name="Linux"/>
+					<os name="Standalone"/>
+				</or>
+			</and>
+		</supports>
+		<accelerator name="dataflow" location="dataflow.cpp"/>
+	</template>
+	<template location="mmultadd" name="mmultadd" description="Matrix Multiplication and Addition">
+		<supports>
+			<and>
+				<or>
+					<os name="Linux"/>
+					<os name="Standalone"/>
+				</or>
+			</and>
+		</supports>
+		<accelerator name="mmult" location="mmult.cpp"/>
+		<accelerator name="madd" location="madd.cpp"/>
+	</template>
+</manifest:Manifest>
+

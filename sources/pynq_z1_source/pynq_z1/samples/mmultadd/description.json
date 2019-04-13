@@ -1,0 +1,42 @@
+{
+    "example": "Matrix Multiplication and Addition",
+    "overview": "Implementation of a 32x32 matrix multiplication followed by a matrix addition using 4-byte float values. Executes both matrix mult and add in software, then in hardware, and verifies the result. By default the functions \u0027mmult()\u0027 and \u0027madd()\u0027 are marked for hardware, and you can build the project. SDSoC pragmas are used to specify sequential access for \u0027mmult()\u0027 function resulting in FIFO interfaces. No pragmas are specified for \u0027madd()\u0027 function resulting in default BRAM interfaces.",
+    "board": [
+        "zc702",
+        "zc706",
+        "zed",
+        "zcu102",
+        "zcu104",
+        "zcu106",
+    ],
+    "os": [
+        "Linux",
+        "Standalone"
+    ],
+    "runtime": [
+        "C/C++"
+    ],
+    "accelerators": [
+        {
+            "name": "mmult",
+            "location": "mmult.cpp"
+        },
+        {
+            "name": "madd",
+            "location": "madd.cpp"
+        }
+    ],
+    "contributors" : [
+        {
+            "group" : "Xilinx, Inc.",
+            "url" : "http://www.xilinx.com"
+        }
+    ],
+    "revision" : [
+        {
+            "date" : "2017",
+            "version" : "1.0",
+            "description" : "Initial revision"
+        }
+    ]
+}
