@@ -217,7 +217,8 @@ Skip to [Continue building the project](#sec3-2) if you are continuing to build 
 	<i>Importing an existing project in the workspace
 </i>
     </p>
-Skip to [Analyze Data Motion Network](#AnalyzeDataMotionNetowrk)
+
+Skip to [Analyze the data motion network](#AnalyzeDataMotionNetowrk)
 
 <a name="sec3-2"></a>
 ### Continue building the project.
