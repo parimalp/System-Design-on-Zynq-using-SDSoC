@@ -12,7 +12,7 @@ After completing this lab, you will be able to:
 
 ## Steps
 
-## Create an SDx Project Step 1
+## Create an SDx Project
 ### Launch SDx and create a project, called lab2, using the matrix-multiply and add template, targeting the PYNQ-Z1 or PYNQ-Z2 board.
 1. Open SDx by selecting **Start &gt; Xilinx Design Tools &gt; SDx IDE 2018.2**
 
@@ -79,7 +79,7 @@ After completing this lab, you will be able to:
 
 	If line numbers are not visible, then you can right-click in the left border of the file and select Show Line Numbers.
 
-1. Double-click the _mmultadd.h_file in the Project Explorer view, to open the file in the source editor.
+1. Double-click the _mmultadd.h_ file in the Project Explorer view, to open the file in the source editor.
 
 1. Immediately preceding the declaration for the _mmult_ function (line 53), insert the following to specify the system port for each of the input arrays
 
@@ -134,7 +134,7 @@ After completing this lab, you will be able to:
 1. Comment out the pragma for _data\_mover_ that you had inserted in the previous section and save the file.
 1. Save the file by selecting **File &gt; Save**
 1. Double-click the **main.cpp** under _lab2 &gt; src_.
-1. Replace 4 _sds\_alloc()_ calls with _malloc()_ and 8 _sds\_free_ calls with _free()(CTRL+F to access Find and Replace)_ and save the file.
+1. Replace 4 _sds\_alloc()_ calls with _malloc()_ and 8 _sds\_free_ calls with _free()_ and save the file.
 1. Right-click the top-level folder for the project and click on **Clean Project** in the menu.
 1. Right-click the top-level folder for the project and click on **Build Project** in the menu.
 1. When the build process is complete, select the **Assistant** pane so you can access Data Motion link.
