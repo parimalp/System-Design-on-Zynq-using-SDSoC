@@ -12,10 +12,11 @@ After completing this lab, you will be able to:
 ## Create an SDx Project 
 ### Launch SDx and create a project, called lab6, using the Empty Application template and then using the provided source files, targeting the PYNQ-Z1 or PYNQ-Z2 board and Standalone OS.
 1. Open SDx, select {labs} as the workspace and click OK.
-2. Create a new project called lab6 targeting either PYNQ-Z1[custom] or PYNQ-Z2[custom] board and Standalone OS, Empty Application template.
-Refer to Lab1 document to how to add custom platform if you don't see it listed.
+2. Create a new project called **lab6** targeting either _PYNQ-Z1[custom]_ or _PYNQ-Z2[custom]_ board, selecting **Standalone OS**, and **Empty Application** template.
 
-### Import the provided source files from source\lab6\src folder.
+	Refer to Lab1 document for how to add custom platform if you don't see it listed.
+
+### Import the provided source files from {source}\lab6\src folder.
 1. Right click on src under lab6 in the Project Explorer tab and select Import…
 2. Click on File System under General category and then click Next.
 3. Click on the Browse button, browse to {source}\lab6\src folder, and click OK.
@@ -24,7 +25,7 @@ Refer to Lab1 document to how to add custom platform if you don't see it listed.
 ## Performance Estimation
 ### Mark dct for the hardware acceleration operating at 100 MHz. Run an initial performance estimate of the hardware only.
 1. Add the dct function operating at 100 MHz in the HW Function pane.
-2. In the Options panel of the SDx Project Overview, click on the Estimate Performance
+2. In the Options panel of the SDx Project Overview, click on the Estimate Performance.
 3. Set the build configuration to Debug and then build the project.
 4. After the build is over, you can see an initial report. This report contains a hardware-only estimate summary and has a link that can be clicked to obtain the software run data, which updates the report with comparison of hardware implementation versus the software-only information.
 Note that the hardware accelerator performs the function in approximately 33011 clock cycles (estimated) clock cycles.
@@ -153,7 +154,7 @@ Notice that input and output ports are using single-port block RAM (RAM_1P), and
 
 	The top-level function has input and output arrays without the HLS interface of bram directive. An ap_memory interface is generated for each of them instead.
 
-1. Open dct\_1d2.rpt and dct\_2d.rpt files either using the Explorer view or by using a hyperlink at the bottom of the dct.rpt in the information view. The report for dct\_2d clearly indicates that most of this design cycles (3668) are spent doing the row and column DCTs.  Also the dct\_1d2 report indicates that the latency is 209 clock cycles ((24+2)\*8+1) for ZedBoard.
+1. Open dct\_1d2.rpt and dct\_2d.rpt files either using the Explorer view or by using a hyperlink at the bottom of the dct.rpt in the information view. The report for dct\_2d clearly indicates that most of this design cycles (3668) are spent doing the row and column DCTs.  Also the dct\_1d2 report indicates that the latency is 209 clock cycles ((24+2)\*8+1).
 
 ## Apply PIPELINE Directive
 ### Create a new solution by copying the previous solution settings. Apply the PIPELINE directive to DCT_Inner_Loop, Xpose_Row_Inner_Loop, Xpose_Col_Inner_Loop, RD_Loop_Col, and WR_Loop_Col. Generate the solution and analyze the output.
@@ -410,13 +411,6 @@ Looking closely at the synthesis log, notice that the coefficient table was auto
 1. Right-click the top-level folder for the project and click on Clean Project in the menu.
 2. Build the project.
 3. After the build is over, you can see an initial report. This report contains a hardware-only estimate summary.
-
-    <p align="center">
-    <img src ="./images/lab6/Fig32.png" />
-    </p>
-    <p align = "center">
-    <i>Initial estimate of hardware only performance of the optimized code</i>
-    </p>
 
 	The Summary section shows that the estimated HW acceleration is 10677 compared to the initial hardware acceleration of 33011, yielding a 3.1x improvement.
 

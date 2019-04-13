@@ -16,12 +16,12 @@ After completing this lab, you will be able to:
 
 	The Workspace Launcher window will appear.
 2. Click on the Browse button and browse to { **labs},** if necessary, and click **OK**.
-3. Select **File \&gt; New \&gt; SDx Project** to open the New Project GUI.
+3. Select **File &gt; New &gt; SDx Project** to open the New Project GUI.
 4. Enter **lab5** as the project name.
 5. Click **Next** to see _Platform_ window showing various available platforms.
 6. Select either _PYNQ-Z1[custom]_ or _PYNQ-Z2[custom]_ and click **Next.**
 
-	Refer to Lab1 document to how to add custom platform if you don't see it listed .
+	Refer to Lab1 document for how to add custom platform if you don't see it listed .
 
 7. Select _Standalone_ as the target OS and click **Next**.
 8. Select **Empty Application** and click **Next**.
@@ -81,11 +81,11 @@ The project will be imported and lab5 folder will be created in the Project Expl
 
 	When the statement is executed, you will see a message is being printed in the Terminal tab.
 
-7. Click on the SDx button on the top-right (![alt tag](./images/lab5/SDx_perspective.png)) to change to the SDx C/C++ perspective.
+7. Change to the SDx C/C++ perspective.
 
 	The Project Explorer will show up.
 
-8. Expand **lab5 \&gt; src** and double-click on the _rgb\_2\_gray.c_ entry to open the file.
+8. Expand **lab5 &gt; src** and double-click on the _rgb\_2\_gray.c_ entry to open the file.
 9. Double-click in the left border of the line (line 19) to set the breakpoint.
 
     <p align="center">
@@ -181,7 +181,7 @@ The project will be imported and lab5 folder will be created in the Project Expl
 ### Use Dump/Restore Data File feature of SDK to update the array_g_1's content with the provided binary data file stored in the source/lab5 directory.
 ### After the color buffer has been converted to gray, you will replace the content of array_g_1 with the binary data provided to you in the lab5_array_g_2.bin file.
 
-1. Select **Xilinx \&gt; Dump/Restore Data File**
+1. Select **Xilinx &gt; Dump/Restore Data File**
 2. Click the _Select_ button, choose **Name=Xilinx Hardware Server** from the _Peers_ section.
 3. Expand the **APU** entry in the _Contexts_ section and select **ARM Cortex-A9 MPCore #0**.
 4. Click **OK**.
@@ -291,7 +291,7 @@ ifconfig and note if any address is being assigned. If not assigned then execute
     <i>Making connection for Linux target</i>
     </p>
 
-1. Right-click on _lab5a_ project in the _Project Explorer_ and select **Debug As \&gt; Launch on Hardware (SDx Application Debugger)**.
+1. Right-click on _lab5a_ project in the _Project Explorer_ and select **Debug As &gt; Launch on Hardware (SDx Application Debugger)**.
 
 	The connection will be made.
 
@@ -307,7 +307,7 @@ T
 
 	The Project Explorer will show up.
 
-1. Expand **lab5a \&gt; src** and double-click on the _rgb\_2\_gray.c_ entry to open the file.
+1. Expand **lab5a &gt; src** and double-click on the _rgb\_2\_gray.c_ entry to open the file.
 2. Double-click in the left border of the line 19 to set the breakpoint.
 3. Switch back to the _Debug_ perspective by clicking on the **Debug** button.
 4. Click on the **Resume** button which will start executing until one of the breakpoints is encountered.
