@@ -141,21 +141,21 @@ After completing this lab, you will be able to:
 21. Click on the **Add to Custom Repositories** link.
 22. Click **OK**.
 23. Create **lab7** directory under **{labs}**.
-24. Copy **lab7\_pynq\_&lt;z1 | Z2&gt;** folder (custom platform) from_{labs}\lab7\_platform\lab7\_pynq\_&lt;z1 | z2&gt;\export_ into the **{labs}\lab7** folder.
+24. Copy **lab7\_pynq\_&lt;z1 | Z2&gt;** folder (custom platform) from {labs}\lab7\_platform\lab7\_pynq\_&lt;z1 | z2&gt;\export into the **{labs}\lab7** folder.
 
 ## Test the Built Platform
 ### In SDx change the workspace to {labs}\labs\lab7. Create a new SDx project called lab7\_test using lab7\_pynq\_z1 or lab7\_pynq\_z2 as the platform, Standalone as the OS, and selecting mmult template provided in the samples directory.
-1. In SDx change the workspace to {labs}\labs\lab7 by selecting File &gt; Switch Workspace &gt; other.
-2. Click OK.
+1. In SDx change the workspace to {labs}\labs\lab7 by selecting **File &gt; Switch Workspace &gt; other**.
+2. Click **OK**.
 3. Close the Welcome page, if displayed.
-4. Select File &gt; New &gt; Xilinx SDx Project…
-5. Enter lab7_test in the Project name field and click Next.
-6. Click Next to see Platform window showing various available platforms.
+4. Select **File &gt; New &gt; Xilinx SDx Project…**
+5. Enter **lab7_test** in the _Project name_ field and click **Next**.
+6. Click **Next** to see Platform window showing various available platforms.
 
 	Notice that the custom platform is not listed. We will have to add the custom platform.
 
 7. Click the **Add Custom Platform…** button
-8. Browse to **{labs}\lab7** , select **lab7\_pynq\_&lt;z1 | z2&gt;** folder, and click **OK**
+8. Browse to **{labs}\lab7**, select **lab7\_pynq\_&lt;z1 | z2&gt;** folder, and click **OK**
 
 	Notice the board related platform is displayed in the available platforms table.
 
