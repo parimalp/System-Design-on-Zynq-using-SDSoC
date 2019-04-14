@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:Manifest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:manifest="http://www.xilinx.com/manifest">
+	<template location="mmult" name="mmult" description="Matrix Multiplication">
+		<supports>
+			<and>
+				<or>
+					<os name="Standalone"/>
+				</or>
+			</and>
+		</supports>
+		<accelerator name="mmult_accel" location="mmult_accel.cpp"/>
+	</template>
+</manifest:Manifest>
+
