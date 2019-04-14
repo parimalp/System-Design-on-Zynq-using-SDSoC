@@ -26,7 +26,7 @@ After completing this lab, you will be able to:
     <i>The IPI design</i>
     </p>
 
-4. Expand the **lab7\_pynq\_&lt;z1 | z2&gt;\_ wrapper**, right-click on the **lab7\_pynq\_&lt;z1 | z2&gt;\_ i** block and select **Generate Output Products**.
+4. Expand the **lab7\_pynq\_&lt;z1 | z2&gt;\_ wrapper** in the **Sources** tab, right-click on the **lab7\_pynq\_&lt;z1 | z2&gt;\_ i** block and select **Generate Output Products**.
 5. Click **Generate**.
 
 	Wait for approximately 7-8 minutes for the output products to be generated. You can see the status in the Design Runs tab.
@@ -51,7 +51,10 @@ After completing this lab, you will be able to:
 
 ### Create a BOOT image
 1. Select **Xilinx &gt; Create Boot Image**.
-2. Browse to **lab7\_&lt;pynq\_z1 | pynq\_z2&gt;.sdk** directory for the _Output BIF File_ path.
+2. Browse to **lab7\_&lt;pynq\_z1 | pynq\_z2&gt;.sdk** directory for the _Output BIF File path_ and click **Save**.
+
+	Notice that the fsbl.elf file entry is already added in to the Boot image path. If not then click on the Add button and add the fsbl.elf entry.
+
 3. Click **Create Image** to create the image file (BOOT.bin) in the _*.sdk\fsbl\bootimage_ directory.
 
 	The fsbl application does not include DDR as one of the target memories. The actual application typically does target DDR memory. Though your application may not be using alloc/calloc/malloc calls, which uses heap memory, the relatively larger memory is required for holding scheduling information and for event tracking structures during the booting up process.
@@ -62,7 +65,7 @@ After completing this lab, you will be able to:
 3. For the Board Support Package, select **fsbl_bsp** in the _Use existing_ option, and click **Next**.
 4. Select **Hello World** from the _Available Templates_ pane and click **Finish**.
 5. Right-click on the **hello_world** application and select **Generate linker script**.
-6. Change the heap size to **64 MB (67108864)**, stack size to **256 KB ( 262144 )**, making sure that _ps7\_ddr\_0_ is the target memory for the Heap and Stack.
+6. Change the heap size to **64 MB (67108864)**, stack size to **256 KB (262144)**, making sure that _ps7\_ddr\_0_ is the target memory for the Heap and Stack.
 7. Click **Generate** to generate the script. Click **Yes** to overwrite.
 
 	There is no need to build this project as we really need the lscript.ld file.
@@ -77,7 +80,7 @@ After completing this lab, you will be able to:
 3. Select **{labs}\lab7\_platform** as the workspace.
 4. Click on the **Create SDx Project** link in the _Welcome_ window or select **File &gt; New &gt; SDx Project**.
 5. Select **Platform** as a new _Project Type_ and click **Next**.
-6. Browse to **{labs}** where the **lab7\_pynq\_&lt;z1 | z2&gt;.dsa** file was generated and select it.
+6. Browse to **{labs}** where the **lab7\_pynq\_&lt;z1 | z2&gt;.dsa** file was generated, select it, and click **Open**.
 7. Click **Finish**.
 
 	The wizard will be opened with Define System Configuration link visible.
@@ -89,11 +92,11 @@ After completing this lab, you will be able to:
     <i>Platform creation wizard</i>
     </p>
 
-8. Click on the _Samples_ browse button, browse to **{sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\samples** directory and click **Ok**.
+8. Click on the _Samples_ browse button, browse to **{sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\samples** directory and click **OK**.
 9. Click the _Define System Configuration_ link.
 10. Enter **Standalone** in the _Name_ field, **Standalone OS** in the _Display Name_ field, and **Baremetal**** support** in the _Description_ box.
-11. Click on the **Boot Directory** browse button, browse to **{labs}\lab7\_pynq\_&lt;z1 | z2&gt;** directory and click **Ok**.
-12. Click on the **Bif File** browse button, browse to **{sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\** , select the provided **standalone.bif** file and click **Open.**
+11. Click on the **Boot Directory** browse button, browse to **{labs}\lab7\_pynq\_&lt;z1 | z2&gt;** directory and click **OK**.
+12. Click on the **Bif File** browse button, browse to {sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\, select the provided **standalone.bif** file and click **Open.**
 
     <p align="center">
     <img src ="./images/lab7/Fig3.png" />
@@ -106,7 +109,7 @@ After completing this lab, you will be able to:
 
 	The System Configuration: Standalone will be displayed with Add Processor Group/Domain link visible.
 
-14. Click on the **Readme** browse button, browse to **{sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\** , select the provided **generic.readme** file and click **Open**.
+14. Click on the **Readme** browse button, browse to {sources}\pynq\_&lt;z1 | z2&gt;\_source\lab7\, select the provided **generic.readme** file and click **Open**.
 
     <p align="center">
     <img src ="./images/lab7/Fig4.png" />
@@ -117,7 +120,7 @@ After completing this lab, you will be able to:
 
 15. Click the _Add Processor Group/Domain_ link
 16. Enter **Standalone** in the _Name_ and _Display Name_ fields, select **standalone** as the _OS_.
-17. Click on the Linker Script browse button, browse to **{labs}\lab7\_pynq\_&lt;z1 | z2&gt;\lab7\_pynq\_&lt;z1 | z2&gt;.sdk\hello\_world\src** directory and select **lscript.ld**
+17. Click on the Linker Script browse button, browse to **{labs}\lab7\_pynq\_&lt;z1 | z2&gt;\lab7\_pynq\_&lt;z1 | z2&gt;.sdk\hello\_world\src** directory, select **lscript.ld**, select **Open**.
 
     <p align="center">
     <img src ="./images/lab7/Fig5.png" />
@@ -126,18 +129,19 @@ After completing this lab, you will be able to:
     <i>Selecting standalone OS and lscript.ld</i>
     </p>
 
-18. Click on the **Generate Platform** link without adding QEMU support.
+18. Click **OK**.
+19. Click on the **Generate Platform** link without adding QEMU support.
 
 	This will generate the platform in the {labs}\lab7\_platform\lab7\_pynq\_&lt;z1 | z2&gt;\export directory.
 
-19. Click **OK**.
+20. Click **OK**.
 
 	Notice the fourth link (Add to Custom Repositories) is active.
 
-20. Click on the **Add to Custom Repositories** link.
-21. Click **OK**.
-22. Create **lab7** directory under **{labs}**.
-23. Copy **lab7\_pynq\_&lt;z1 | Z2&gt;** folder (custom platform) from_{labs}\lab7\_platform\lab7\_pynq\_&lt;z1 | z2&gt;\export_ into the **{labs}\lab7** folder.
+21. Click on the **Add to Custom Repositories** link.
+22. Click **OK**.
+23. Create **lab7** directory under **{labs}**.
+24. Copy **lab7\_pynq\_&lt;z1 | Z2&gt;** folder (custom platform) from_{labs}\lab7\_platform\lab7\_pynq\_&lt;z1 | z2&gt;\export_ into the **{labs}\lab7** folder.
 
 ## Test the Built Platform
 ### In SDx change the workspace to {labs}\labs\lab7. Create a new SDx project called lab7\_test using lab7\_pynq\_z1 or lab7\_pynq\_z2 as the platform, Standalone as the OS, and selecting mmult template provided in the samples directory.
